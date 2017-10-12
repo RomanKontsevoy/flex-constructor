@@ -5,6 +5,36 @@ body {
     line-height: 24px;
 }
 
+h2 {
+    font-size: 18px;
+    line-height: 18px;
+    margin: 10px auto;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #F7E815;
+    padding: 7px 15px;
+    border-radius: 4px;
+    border: 3px outset #ccc;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #E2BC40;
+}
+
+.btn:active {
+    border: 3px inset #ccc;
+}
+
 .container {
     width: 80vw;
     margin: 0 auto;
@@ -44,12 +74,17 @@ body {
     vertical-align: top;
     width: 17px;
     height: 17px;
-    margin: 0 3px 0 0;
+    margin: 3px 5px 0 0;
     background-color: #fff;
+    border: 3px solid #fff;
     border-radius: 50%;
 }
 
-.parent-box-stiles label {
+.radio:checked {
+    background-color: #1f1f1f;
+}
+
+#parent-stiles label {
     display: block;
     width: 30%;
     text-align: left;

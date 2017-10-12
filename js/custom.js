@@ -30,7 +30,20 @@ $(function() {
         }
     }
 
-    testarea.addEventListener('click', create)
+    testarea.addEventListener('click', create);
+
+    let displayRadios = document.getElementsByName("display");
+
+    let display = function() {
+        for (var i = 0; i < displayRadios.length; i++) {
+            if (displayRadios[i].checked) {
+                testarea.style.display = displayRadios[i].value;
+            }
+        }
+        console.log(testarea.style.display)
+    }
+
+    parentStylesBtn.addEventListener('click', display);
 
 
 });
