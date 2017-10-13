@@ -5,9 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <!--For Adaptivity-->
-
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
@@ -18,7 +17,7 @@
             <div id="testarea"></div>
         </div>
         <div class="right-side">
-            <div id="parent-stiles">
+            <div id="parent-styles">
                 <h2>Родительский элемент</h2>
                 <div class="display">
                     <h3>Свойство "display":</h3>
@@ -219,8 +218,26 @@
                     </label>
                 </div>
                 <button class="btn" id="parentStylesBtn">
-                    Accept!
+                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
                 </button>
+            </div>
+            <div id="children-styles">
+                <h2>Дочерние элементы</h2>
+                <div class="basic-params">
+                    <h3>Базовые параметры:</h3>
+                    <input id="newWidth" type="number" value="100"> <br><br>
+                    <input id="newHeight" type="number" value="100"> <br><br>
+                    <input type="color" id="newColor" value="#7dff55"> <br><br>
+                    <label>
+                    Круг
+                    <input class="radio" type="radio" name="figure" value="circle" checked>
+                    </label>
+                    <label>
+                    Квадрат
+                    <input class="radio" type="radio" name="figure" value="square">
+                    </label>
+                </div>
+
             </div>
         </div>
     </div>

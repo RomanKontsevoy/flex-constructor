@@ -24,11 +24,12 @@ h3 {
 
 .btn {
     background-color: #F7E815;
-    padding: 10px 20px;
-    border-radius: 4px;
+    padding: 10px;
+    border-radius: 50%;
     border: 1px outset #ccc;
-    margin-top: 10px;
-    font-size: 20px;
+    margin-top: 7vh;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .btn:hover {
@@ -42,12 +43,12 @@ h3 {
 
 #parentStylesBtn {
     position: fixed;
-    right: 11vw;
-    top: 5vh;
+    right: 28vw;
+    top: 2vh;
 }
 
 .container {
-    width: 80vw;
+    width: 100vw;
     margin: 0 auto;
     display: flex;
 }
@@ -55,23 +56,40 @@ h3 {
 .left-side {
     background-color: #f0f0f0;
     min-height: 100vh;
-    width: 48vw;
+    width: 46vw;
     align-self: stretch;
+    display: flex;
 }
 
 .right-side {
+    width: 54vw;
+    display: flex;
+}
+
+.right-side #parent-styles {
     background-color: #e0e0e0;
-    width: 32vw;
+    width: 27vw;
     align-self: stretch;
     padding: 5vh 15px;
+    max-height: 100vh;
+    overflow: auto;
+}
+
+.right-side #children-styles {
+    background-color: #e0e0e0;
+    width: 27vw;
+    align-self: stretch;
+    padding: 5vh 15px;
+    max-height: 100vh;
+    overflow: auto;
 }
 
 #testarea {
     border: 4px groove #ccc;
-    width: 46vw;
+    width: 44vw;
     height: 90vh;
     position: fixed;
-    left: 11vw;
+    left: 1vw;
     top: 5vh;
     display: flex;
     align-items: center;
@@ -80,7 +98,7 @@ h3 {
 }
 
 .el {
-    background-color: #F56;
+    background-color: #7dff55;
     margin: 5px auto;
 }
 
@@ -98,7 +116,7 @@ h3 {
     background-color: #1f1f1f;
 }
 
-#parent-stiles label {
+#parent-styles label {
     display: block;
     text-align: left;
 }

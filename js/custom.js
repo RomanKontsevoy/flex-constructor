@@ -1,12 +1,27 @@
 $(function() {
 
+    let width, height, color, newBorderRadius;
 
     let setSize = function() {
         // let w, h;
-        width = 100;
-        height = 100;
-    }
+        width = newWidth.value;
+        height = newHeight.value;
+    };
 
+    let setFigure = function() {
+        let figures = document.getElementsByName("figure");
+        for (var i = 0; i < figures.length; i++) {
+            if (figures[i].checked) {
+                newBorderRadius = figures[i].value;
+            }
+        }
+        console.log('newBorderRadius = ' + newBorderRadius);
+
+    };
+
+    let setColor = function() {
+        color = newColor.value;
+    };
 
 
     let make = function(e, i) {
@@ -14,13 +29,25 @@ $(function() {
         if (target = testarea) {
             let element = document.createElement('div');
             setSize();
+            setFigure();
+            setColor();
             let ind = ++i;
             element.className = '.el';
-            element.style.minWidth = width + 10 + 'px';
-            element.style.minHeight = height + 10 + 'px';
-            element.style.backgroundColor = '#5f5';
+            element.style.minWidth = width + 'px';
+            element.style.minHeight = height + 'px';
+            element.style.backgroundColor = color;
             let numer = document.createElement('p');
             numer.innerHTML = ind;
+            numer.style.display = "flex";
+            numer.style.justifyContent = 'center';
+            numer.style.alignItems = 'center';
+            numer.style.width = "30px";
+            numer.style.height = "30px";
+            numer.style.borderRadius = "50%";
+            numer.style.backgroundColor = "#0ff";
+            numer.style.borderColor = "#00f";
+            numer.style.borderWidth = "2px";
+            numer.style.borderStyle = "solid";
             element.appendChild(numer);
             element.style.display = 'flex';
             element.style.justifyContent = 'center';
@@ -28,10 +55,17 @@ $(function() {
             element.style.margin = '1px';
             element.style.color = '#f00';
             element.style.fontSize = "25px";
-            target.appendChild(element);
-        }
+            if (newBorderRadius = "circle") {
+                element.style.borderRadius = "50%";
+            } else {
+                element.style.borderRadius = "0";
+            }
 
-    }
+            console.log('newBorderRadius = ' + newBorderRadius);
+
+            target.appendChild(element);
+        };
+    };
 
     let create = function(e) {
         let elements = document.getElementsByClassName('.el');
@@ -39,14 +73,14 @@ $(function() {
         if (elements.length <= 19) {
             if (e = testarea) {
                 make(e, elements.length);
-            }
+            };
 
         } else {
             alert('Извините, создание более двадцати фигур невозможно!');
-        }
+        };
 
 
-    }
+    };
 
     testarea.addEventListener('click', create);
 
@@ -57,10 +91,10 @@ $(function() {
         for (var i = 0; i < displayRadios.length; i++) {
             if (displayRadios[i].checked) {
                 testarea.style.display = displayRadios[i].value;
-            }
-        }
+            };
+        };
         console.log(testarea.style.display)
-    }
+    };
 
     let justifyContent = function() {
         let justifyContent = document.getElementsByName("justify-content");
