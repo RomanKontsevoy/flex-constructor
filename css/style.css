@@ -6,9 +6,12 @@ body {
 }
 
 h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
     font-size: 18px;
     line-height: 18px;
-    margin: 10px auto;
+    margin: 0 auto;
     text-transform: uppercase;
 }
 
@@ -16,14 +19,16 @@ h3 {
     font-size: 18px;
     line-height: 18px;
     margin-bottom: 10px;
+    margin-top: 25px;
 }
 
 .btn {
     background-color: #F7E815;
-    padding: 7px 15px;
+    padding: 10px 20px;
     border-radius: 4px;
-    border: 3px outset #ccc;
+    border: 1px outset #ccc;
     margin-top: 10px;
+    font-size: 20px;
 }
 
 .btn:hover {
@@ -32,7 +37,13 @@ h3 {
 }
 
 .btn:active {
-    border: 3px inset #ccc;
+    border: 1px inset #ccc;
+}
+
+#parentStylesBtn {
+    position: fixed;
+    right: 11vw;
+    top: 5vh;
 }
 
 .container {
@@ -63,6 +74,9 @@ h3 {
     left: 11vw;
     top: 5vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .el {
@@ -86,7 +100,6 @@ h3 {
 
 #parent-stiles label {
     display: block;
-    width: 30%;
     text-align: left;
 }
 
