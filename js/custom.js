@@ -1,6 +1,6 @@
 $(function() {
 
-    let width, height, color, newBorderRadius, order, flexBasis;
+    let width, height, color, newBorderRadius, order, flexBasis, flexGrow, flexShrink, alignSelf;
 
     let setSize = function() {
         if (newWidth.value > 20 && newHeight.value > 20) {
@@ -55,13 +55,42 @@ $(function() {
                 flexBasisMeasure = measureSelect[i].value;
             };
         };
-    }
+    };
 
     let flexBasisValue = function(a) {
         flexBasisCount();
         measure(a);
         flexBasis = flexBasis + flexBasisMeasure;
         console.log(flexBasis);
+    };
+
+    let setFlexGrow = function() {
+        let flexGrowRadios = document.getElementsByName("flex-grow");
+        newFlexGrowValue.value = newFlexGrow.value;
+        for (var i = 0; i < flexGrowRadios.length; i++) {
+            if (flexGrowRadios[i].checked) {
+                flexGrow = flexGrowRadios[i].value;
+            };
+        };
+    };
+
+    let setFlexShrink = function() {
+        let flexShrinkRadios = document.getElementsByName("flex-shrink");
+        newFlexShrinkValue.value = newFlexShrink.value;
+        for (var i = 0; i < flexShrinkRadios.length; i++) {
+            if (flexShrinkRadios[i].checked) {
+                flexShrink = flexShrinkRadios[i].value;
+            };
+        };
+    };
+
+    let setAlignSelf = function() {
+        let alignSelfRadios = document.getElementsByName("align-self");
+        for (var i = 0; i < alignSelfRadios.length; i++) {
+            if (alignSelfRadios[i].checked) {
+                alignSelf = alignSelfRadios[i].value;
+            };
+        };
     }
 
 
@@ -73,6 +102,9 @@ $(function() {
             setFigure();
             setColor();
             setOrder();
+            setFlexGrow();
+            setFlexShrink();
+            setAlignSelf();
             let ind = ++i;
             element.className = '.el';
             element.style.width = width + 'px';
@@ -108,6 +140,9 @@ $(function() {
             element.style.order = order;
             flexBasisValue("flexBasisMeasure");
             element.style.flexBasis = flexBasis;
+            element.style.flexGrow = flexGrow;
+            element.style.flexShrink = flexShrink;
+            element.style.alignSelf = alignSelf;
         };
     };
 
