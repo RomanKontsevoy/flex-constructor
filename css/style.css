@@ -116,9 +116,13 @@ h3 {
     background-color: #1f1f1f;
 }
 
-#parent-styles label {
+label {
     display: block;
     text-align: left;
+}
+
+.basic-params label {
+    display: inline-block;
 }
 
 .prop {
@@ -127,4 +131,8 @@ h3 {
 
 .value {
     color: #3519D1;
+}
+
+input[type="number"] {
+    width: 45px;
 }

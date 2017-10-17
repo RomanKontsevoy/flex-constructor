@@ -225,9 +225,9 @@
                 <h2>Дочерние элементы</h2>
                 <div class="basic-params">
                     <h3>Базовые параметры:</h3>
-                    <input id="newWidth" type="number" value="100"> <br><br>
-                    <input id="newHeight" type="number" value="100"> <br><br>
-                    <input type="color" id="newColor" value="#7dff55"> <br><br>
+                    <span class="prop">width</span>: <input id="newWidth" type="number" value="100">; <br><br>
+                    <span class="prop">height</span>: <input id="newHeight" type="number" value="100">; <br><br>
+                    <span class="prop">color</span>: <input type="color" id="newColor" value="#7dff55"> <span class="value" id=newColorValue></span>; <br><br>
                     <label>
                     Круг
                     <input class="radio" type="radio" name="figure" value="circle" checked>
@@ -235,6 +235,54 @@
                     <label>
                     Квадрат
                     <input class="radio" type="radio" name="figure" value="square">
+                    </label>
+                </div>
+                <div class="order">
+                    <h3>Свойство "order":</h3>
+                    <label>
+                        <input class="radio" type="radio" name="order" id="newOrderValue" checked>
+                        <span class="prop">order</span>: 
+                        <span class="value"><input id="newOrder" type="number" value="0"></span>;
+                    </label>
+                    <label>
+                        <input class="radio" type="radio" name="order" value="initial">
+                        <span class="prop">order</span>: 
+                        <span class="value">initial</span>;
+                    </label>
+                    <label>
+                        <input class="radio" type="radio" name="order" value="inherit">
+                        <span class="prop">order</span>: 
+                        <span class="value">inherit</span>;
+                    </label>
+                </div>
+                <div class="flex-basis">
+                    <h3>Свойство "flex-basis":</h3>
+                    <label>
+                        <input class="radio" type="radio" name="flex-basis" value="auto">
+                        <span class="prop">flex-basis</span>: 
+                        <span class="value">auto</span>;
+                    </label>
+                    <label>
+                        <input class="radio" type="radio" name="flex-basis" id="newFlexBasisValue" checked>
+                        <span class="prop">flex-basis</span>: 
+                        <span class="value"><input id="newFlexBasis" type="number" value="100">
+                        <select name="measure" id="flexBasisMeasure">
+                            <option value="px">px</option>
+                            <option value="%">%</option>
+                            <option value="em">em</option>
+                            <option value="vw">vw</option>
+                        </select>
+                        </span>;
+                    </label>
+                    <label>
+                        <input class="radio" type="radio" name="flex-basis" value="initial">
+                        <span class="prop">flex-basis</span>: 
+                        <span class="value">initial</span>;
+                    </label>
+                    <label>
+                        <input class="radio" type="radio" name="flex-basis" value="inherit">
+                        <span class="prop">flex-basis</span>: 
+                        <span class="value">inherit</span>;
                     </label>
                 </div>
 
